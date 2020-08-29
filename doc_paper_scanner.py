@@ -97,7 +97,10 @@ while True:
     imgContour = img.copy()
     imgThres = preprocessing(img)
     biggest = getContours(imgThres, imgContour)
-    imgWarp = getwarp(img, biggest)
-    cv2.imshow('Video frame', imgWarp)
+    if biggest.size != 0:
+        imgWarp = getwarp(img, biggest)
+        cv2.imshow('Video frame', imgWarp)
+    else:
+        cv2.imshow('No rectangular objects found', img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
