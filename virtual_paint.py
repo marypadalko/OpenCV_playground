@@ -13,14 +13,14 @@ cap = cv2.VideoCapture(0)
 # set parameters
 cap.set(3, frameWidth)
 cap.set(4, frameHeight)
-cap.set(10, 150)
+# cap.set(10, 150)  #  not necessary
 
 myColors = [[5, 107, 0, 19, 255, 255], # hue, value, saturation (lower & upper bounds). <- orange
             [133, 56, 0, 159, 156, 255],  # <- purple
             [57, 76, 0, 100, 255, 255], # <- green, etc
             [90, 48, 0, 118, 255, 255]]
 
-myColorValues = [[51, 153, 255],  # BGR format, not RGB
+myColorValues = [[50, 150, 255],  # BGR format, not RGB
                  [255, 0, 255],
                  [0, 255, 0],
                  [255, 0, 0]]
